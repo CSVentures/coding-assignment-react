@@ -1,0 +1,21 @@
+.card-link {
+  box-sizing: border-box;
+  text-decoration: none;
+  color: black;
+}
+.card-box {
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  &:hover {
+    cursor: pointer;
+    background-color: #eeeeee;
+    transition: background-color 0.75s ease;
+  }
+}
+.ticket-id {
+  color: #80838d;
+  font-size: small;
+  font-weight: 700;
+}

@@ -12,12 +12,12 @@ export class TicketsService {
       id: 1,
       description: 'Install a monitor arm',
       assigneeId: 1,
-      completed: false,
+      completed: true,
     },
     {
       id: 2,
       description: 'Move the desk to the new location',
-      assigneeId: 1,
+      assigneeId: 2,
       completed: false,
     },
   ];

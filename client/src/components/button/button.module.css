@@ -1,0 +1,9 @@
+.create-button {
+  background-color: transparent;
+  color: #222222;
+  cursor: pointer;
+  width: 100%;
+  &:hover {
+    background-color: #eeeeee;
+  }
+}
