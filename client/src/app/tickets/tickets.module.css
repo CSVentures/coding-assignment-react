@@ -1,2 +1,88 @@
 .tickets {
+  position: relative;
+  z-index: 1;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  gap: 1rem;
+}
+
+.loading-container .ant-spin {
+  transform: scale(1.2);
+}
+
+.loading-container p {
+  color: #64748b;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* Enhanced empty state */
+.empty-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.empty-container .ant-empty-description {
+  color: #64748b;
+  font-size: 1.1rem;
+}
+
+.mobileModal .ant-modal-content {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.mobileModal .ant-modal-header {
+  border-radius: 0;
+}
+
+.mobileModal .ant-modal-body {
+  padding: 0;
+}
+
+.mobileModal .ant-modal-body::-webkit-scrollbar {
+  width: 4px;
+}
+
+.mobileModal .ant-modal-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.mobileModal .ant-modal-body::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 2px;
+}
+
+.mobileModal .ant-modal-body::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+.mobileModal .ant-form-item-label > label {
+  font-weight: 500;
+  color: #262626;
+}
+
+.mobileModal .ant-input,
+.mobileModal .ant-select-selector {
+  border-radius: 8px;
+}
+
+.mobileModal .ant-btn {
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.mobileModal .ant-btn-lg {
+  min-height: 48px;
 }
