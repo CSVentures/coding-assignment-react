@@ -1,6 +1,6 @@
-import { Injectable } from '@nestjs/common';
-import { Ticket } from '@acme/shared-models';
-import { UsersService } from '../users/users.service';
+import { Injectable } from "@nestjs/common";
+import { Ticket } from "@acme/shared-models";
+import { UsersService } from "../users/users.service";
 
 @Injectable()
 export class TicketsService {
@@ -10,13 +10,13 @@ export class TicketsService {
   private storedTickets: Ticket[] = [
     {
       id: 1,
-      description: 'Install a monitor arm',
+      description: "Install a monitor arm",
       assigneeId: 1,
       completed: false,
     },
     {
       id: 2,
-      description: 'Move the desk to the new location',
+      description: "Move the desk to the new location",
       assigneeId: 1,
       completed: false,
     },
@@ -35,6 +35,7 @@ export class TicketsService {
   }
 
   async newTicket(payload: { description: string }): Promise<Ticket> {
+    console.log("🚀 ~ TicketsService ~ newTicket ~ payload:", payload);
     const newTicket: Ticket = {
       id: this.nextId++,
       description: payload.description,

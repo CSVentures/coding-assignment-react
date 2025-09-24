@@ -1,0 +1,122 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px;
+  min-height: 100vh;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ticketCard {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background: white;
+}
+
+.ticketInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.statusSection {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.statusTag {
+  font-size: 14px;
+  padding: 4px 12px;
+  border-radius: 16px;
+}
+
+.toggleButton {
+  margin-left: auto;
+}
+
+.descriptionSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 16px;
+  background-color: #fafafa;
+  border-radius: 6px;
+  border-left: 4px solid #1890ff;
+}
+
+.assigneeSection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.assigneeControls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.assigneeName {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .statusSection {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .toggleButton {
+    margin-left: 0;
+  }
+
+  .assigneeControls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
