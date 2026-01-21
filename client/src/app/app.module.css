@@ -1,3 +1,9 @@
+
+
 .app {
   padding: 10px;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }

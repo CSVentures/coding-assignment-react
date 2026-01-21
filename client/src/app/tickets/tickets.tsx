@@ -1,26 +1,13 @@
-import { Ticket } from '@acme/shared-models';
-import styles from './tickets.module.css';
+import { Route, Routes } from 'react-router-dom';
+import { TicketDetails } from './components/TicketDetails';
+import { TicketList } from './components/TicketList';
 
-export interface TicketsProps {
-  tickets: Ticket[];
-}
-
-export function Tickets(props: TicketsProps) {
+export function Tickets() {
   return (
-    <div className={styles['tickets']}>
-      <h2>Tickets</h2>
-      {props.tickets ? (
-        <ul>
-          {props.tickets.map((t) => (
-            <li key={t.id}>
-              Ticket: {t.id}, {t.description}
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <span>...</span>
-      )}
-    </div>
+    <Routes>
+      <Route path='/' element={<TicketList />} />
+      <Route path='/ticket/:id' element={<TicketDetails />} />
+    </Routes>
   );
 }
 
