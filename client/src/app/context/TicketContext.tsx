@@ -26,7 +26,7 @@ const initialState: TicketState = {
 function ticketReducer(state: TicketState, action: TicketAction): TicketState {
   switch (action.type) {
     case 'SET_TICKETS':
-      return { ...state, tickets: action.payload, loading: false };
+      return { ...state, tickets: action.payload };
     case 'SET_USERS':
       return { ...state, users: action.payload };
     case 'ADD_TICKET':
@@ -55,7 +55,7 @@ function ticketReducer(state: TicketState, action: TicketAction): TicketState {
     case 'SET_LOADING':
       return { ...state, loading: action.payload };
     case 'SET_ERROR':
-      return { ...state, error: action.payload, loading: false };
+      return { ...state, error: action.payload };
     case 'SET_FILTER':
       return { ...state, filter: action.payload };
     default:
@@ -106,9 +106,11 @@ export function TicketProvider({ children }: { children: React.ReactNode }) {
   }, [toAppError]);
 
   const fetchUsers = useCallback(async () => {
+    dispatch({ type: 'SET_LOADING', payload: true });
     try {
       const users = await api.getUsers();
       dispatch({ type: 'SET_USERS', payload: users });
+      dispatch({ type: 'SET_ERROR', payload: null });
     } catch (err: unknown) {
       if (err instanceof Error && err.name !== 'AbortError') {
         dispatch({ type: 'SET_ERROR', payload: toAppError(err) });
@@ -201,9 +203,8 @@ export function TicketProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     const loadData = async () => {
-      dispatch({ type: 'SET_LOADING', payload: true });
-      // Both have completed (success or failure)
-      Promise.allSettled([fetchTickets(), fetchUsers()]);
+      const results = await Promise.allSettled([fetchTickets(), fetchUsers()]);
+      dispatch({ type: 'SET_LOADING', payload: false });
     };
 
     loadData();
