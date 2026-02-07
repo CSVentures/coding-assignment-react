@@ -1,0 +1,27 @@
+assets by info 351 KiB [immutable]
+  assets by path *.js 343 KiB
+    asset main.3af315ecc2df55c1.js 338 KiB [emitted] [immutable] [big] (name: main)
+    asset runtime.43c6cd21681247f7.js 4.97 KiB [emitted] [immutable] (name: runtime)
+    asset styles.52464a1aa83cd2e5.js 442 bytes [emitted] [immutable] (name: styles)
+  assets by path *.css 7.31 KiB
+    asset main.232459759f58e6ca.css 7.31 KiB [emitted] [immutable] [minimized] (name: main)
+    asset styles.ef46db3751d8e999.css 0 bytes [emitted] [immutable] [minimized] (name: styles)
+asset favicon.ico 14.7 KiB [emitted] [from: client/src/favicon.ico] [copied]
+asset 3rdpartylicenses.txt 6.55 KiB [emitted]
+asset assets/.gitkeep 0 bytes [emitted] [from: client/src/assets/.gitkeep] [copied]
+Entrypoint main [big] 350 KiB = runtime.43c6cd21681247f7.js 4.97 KiB main.232459759f58e6ca.css 7.31 KiB main.3af315ecc2df55c1.js 338 KiB
+Entrypoint styles 5.41 KiB = runtime.43c6cd21681247f7.js 4.97 KiB styles.ef46db3751d8e999.css 0 bytes styles.52464a1aa83cd2e5.js 442 bytes
+orphan modules 68.2 KiB (javascript) 3.66 KiB (runtime) [orphan] 30 modules
+runtime modules 2.5 KiB 3 modules
+cacheable modules 336 KiB (javascript) 8.86 KiB (css/mini-extract)
+  javascript modules 336 KiB
+    modules by path ./node_modules/ 284 KiB 13 modules
+    modules by path ./client/src/ 52.2 KiB
+      ./client/src/main.tsx + 7 modules 52.1 KiB [built] [code generated]
+      ./client/src/styles.css 50 bytes [built] [code generated]
+  css modules 8.86 KiB
+    css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[5].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[5].oneOf[8].use[2]!./client/src/styles.css 80 bytes [built] [code generated]
+    css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[5].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[5].oneOf[0].use[2]!./client/src/app/app.module.css 37 bytes [built] [code generated]
+    css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[5].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[5].oneOf[0].use[2]!./client/src/app/tickets/tickets.module.css 4.6 KiB [built] [code generated]
+    css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[5].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[5].oneOf[0].use[2]!./client/src/app/ticket-details/ticket-details.module.css 4.14 KiB [built] [code generated]
+webpack 5.75.0 compiled successfully in 2530 ms

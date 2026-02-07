@@ -109,12 +109,12 @@ export const TicketProvider: React.FC<TicketProviderProps> = ({ children }) => {
       });
 
       if (!response.ok) {
-        throw new Error("Failed to assign ticket");
+        throw new Error("Failed to assign a ticket");
       }
 
       // Update the ticket in local state
       setTickets((prev) =>
-        prev.map((ticket) => (ticket.id === ticketId ? { ...ticket, assigneeId: userId } : ticket))
+        prev.map((ticket) => (ticket.id === ticketId ? { ...ticket, assigneeId: userId } : ticket)),
       );
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to assign ticket");
@@ -136,7 +136,7 @@ export const TicketProvider: React.FC<TicketProviderProps> = ({ children }) => {
 
       // Update the ticket in local state
       setTickets((prev) =>
-        prev.map((ticket) => (ticket.id === ticketId ? { ...ticket, assigneeId: null } : ticket))
+        prev.map((ticket) => (ticket.id === ticketId ? { ...ticket, assigneeId: null } : ticket)),
       );
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to unassign ticket");
@@ -158,13 +158,13 @@ export const TicketProvider: React.FC<TicketProviderProps> = ({ children }) => {
 
       // Update the ticket in local state
       setTickets((prev) =>
-        prev.map((ticket) => (ticket.id === ticketId ? { ...ticket, completed } : ticket))
+        prev.map((ticket) => (ticket.id === ticketId ? { ...ticket, completed } : ticket)),
       );
     } catch (err) {
       setError(
         err instanceof Error
           ? err.message
-          : `Failed to ${completed ? "complete" : "uncomplete"} ticket`
+          : `Failed to ${completed ? "complete" : "uncomplete"} ticket`,
       );
       throw err;
     }
