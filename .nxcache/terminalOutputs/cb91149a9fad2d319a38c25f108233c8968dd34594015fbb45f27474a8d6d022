@@ -15,6 +15,6 @@ modules by path external "@nestjs/ 84 bytes
   external "@nestjs/common" 42 bytes [built] [code generated]
   external "@nestjs/core" 42 bytes [built] [code generated]
 external "tslib" 42 bytes [built] [code generated]
-webpack 5.75.0 compiled successfully in 962 ms
+webpack 5.75.0 compiled successfully in 1026 ms
 [36mType-checking in progress...[39m
 [32mNo errors found.[39m
