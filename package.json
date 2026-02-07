@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "nx run-many --target=serve --projects=server,client",
-    "test": "nx run-many --target=test --projects=server,client"
+    "test": "nx run-many --target=test --projects=server,client",
+    "build": "nx run-many --target=build --projects=server,client"
   },
   "dependencies": {
     "@nestjs/common": "9.2.1",
